@@ -1,13 +1,135 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background: #fcfcfc;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+}
+
+.dropdown{
+  width: 400px;
+  margin: 100px auto;
+  position: relative;
+  user-select: none;
+}
+
+.dropdown .dropdown-btn {
+  padding: 15px 20px;
+  width: 150px;
+  border-radius: 18px;
+  background: #0d6efd;
+  box-shadow: 3px 3px 10px 6px rgba(0, 0,0, 0.6);
+  font-weight: 100;
+  color: rgb(253, 253, 253);
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
+  transition: .3s ease all;
+}
+
+.dropdown .dropdown-btn:hover {
+  background: #0a58ca;
+
+}
+
+.dropdown .dropdown-content {
+  position: absolute;
+  width: 120px;
+  top : 120%;
+  padding: 10px;
+  border-radius: 5px;
+  background: #fcfcfc;
+  box-shadow: 3px 3px 10px 6px rgba(0, 0,0, 0.6);
+  color: #333;
+}
+
+.dropdown .dropdown-content .dropdown-item{
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: left;
+}
+
+.dropdown .dropdown-content .dropdown-item:hover{
+  background: #f4f4f4;
+}
+.overlay{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:rgba(0, 0,0, 0.5) ;
+  padding: 40px;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container{
+  width: 500px;
+  height: auto;
+  position: relative;
+  background:#fff;
+  border-radius: 20px;
+  box-shadow: rgba(100, 100,111, 0.2) 0px 7px 29px 0px;
+  padding:20px ;
+  flex-direction: column;
+  flex-wrap: wrap;
+  cursor: default;
+}
+
+.modal-header{
+  display:flex ;
+  align-items: center;
+  justify-content:space-between ;
+  margin-bottom: 20px;
+  padding-bottom:20px ;
+  border-bottom: 1px solid #e8e8e8;
+  font-weight: bold;
+}
+
+.btn-close{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  transition: .3s ease all;
+  border-radius: 5px;
+  color: #000;
+  background-color: #fff;
+}
+
+.content-modal{
+  display: flex ;
+  flex-direction: column ;
+  align-items: left ;
+}
+
+img{
+  border-radius: 50%;
+  
+}
+
+.person{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+.content-information{
+  margin-left: 5px;
 }
